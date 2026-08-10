@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyPl920FpR9to1y5GmGBQIus",
+      "authorship_tag": "ABX9TyMvAASVke9Q5hkQd4AxPlKD",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -28,40 +28,13 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 3,
+      "execution_count": null,
       "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "gJBPnOpJug6o",
-        "outputId": "7149d0ad-1e6d-43c5-bcbf-0d95bf5ed363"
+        "id": "gJBPnOpJug6o"
       },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Number of Elements = 100\n",
-            "\n",
-            "Bubble Sort    : 95 microseconds\n",
-            "Selection Sort : 52 microseconds\n",
-            "Insertion Sort : 40 microseconds\n",
-            "Merge Sort     : 121 microseconds\n",
-            "Quick Sort     : 22 microseconds\n"
-          ]
-        },
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": []
-          },
-          "metadata": {},
-          "execution_count": 3
-        }
-      ],
+      "outputs": [],
       "source": [
-        "%%shell\n",
-        "cat <<EOF > /content/sort_benchmarks.cpp\n",
+        "\n",
         "#include <iostream>\n",
         "#include <vector>\n",
         "#include <cstdlib>\n",
@@ -71,7 +44,6 @@
         "using namespace std;\n",
         "using namespace chrono;\n",
         "\n",
-        "// Bubble Sort\n",
         "void bubbleSort(vector<int> &a)\n",
         "{\n",
         "    int n = a.size();\n",
@@ -82,7 +54,7 @@
         "                swap(a[j], a[j + 1]);\n",
         "}\n",
         "\n",
-        "// Selection Sort\n",
+        "\n",
         "void selectionSort(vector<int> &a)\n",
         "{\n",
         "    int n = a.size();\n",
@@ -99,7 +71,7 @@
         "    }\n",
         "}\n",
         "\n",
-        "// Insertion Sort\n",
+        "\n",
         "void insertionSort(vector<int> &a)\n",
         "{\n",
         "    int n = a.size();\n",
@@ -119,7 +91,7 @@
         "    }\n",
         "}\n",
         "\n",
-        "// Merge Sort\n",
+        "\n",
         "void merge(vector<int> &a, int left, int mid, int right)\n",
         "{\n",
         "    vector<int> temp;\n",
@@ -155,7 +127,7 @@
         "    }\n",
         "}\n",
         "\n",
-        "// Quick Sort\n",
+        "\n",
         "int partition(vector<int> &a, int low, int high)\n",
         "{\n",
         "    int pivot = a[high];\n",
